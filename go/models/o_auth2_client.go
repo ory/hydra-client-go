@@ -102,7 +102,7 @@ type OAuth2Client struct {
 	LogoURI string `json:"logo_uri,omitempty"`
 
 	// Metadata is arbitrary data.
-	Metadata map[string]interface{} `json:"metadata,omitempty"`
+	Metadata interface{} `json:"metadata,omitempty"`
 
 	// Owner is a string identifying the owner of the OAuth 2.0 Client.
 	Owner string `json:"owner,omitempty"`
