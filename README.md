@@ -1,4 +1,6 @@
-# ory/hydra-client-go-go
+# ory/hydra-client-go
+
+[![godoc](https://pkg.go.dev/badge/github.com/ory/hydra-client-go.svg)](https://pkg.go.dev/github.com/ory/hydra-client-go)
 
 This is the official Ory Hydra SDK for go.
 
