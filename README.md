@@ -1,4 +1,4 @@
-# ory/hydra-client-go-go
+# ory/hydra-client-go
 
 This is the official Ory Hydra SDK for go.
 
