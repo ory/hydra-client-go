@@ -3,7 +3,7 @@
  *
  * Documentation for all of Ory Oathkeeper's APIs. 
  *
- * API version: v1.11.6
+ * API version: v1.11.7
  * Contact: hi@ory.sh
  */
 
