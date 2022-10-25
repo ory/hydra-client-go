@@ -1,22 +1,18 @@
 # \MetadataApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to _http://localhost_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetVersion**](MetadataApi.md#GetVersion) | **Get** /version | Return Running Software Version.
-[**IsAlive**](MetadataApi.md#IsAlive) | **Get** /health/alive | Check HTTP Server Status
-[**IsReady**](MetadataApi.md#IsReady) | **Get** /health/ready | Check HTTP Server and Database Status
-
-
+| Method                                      | HTTP request          | Description                           |
+| ------------------------------------------- | --------------------- | ------------------------------------- |
+| [**GetVersion**](MetadataApi.md#GetVersion) | **Get** /version      | Return Running Software Version.      |
+| [**IsAlive**](MetadataApi.md#IsAlive)       | **Get** /health/alive | Check HTTP Server Status              |
+| [**IsReady**](MetadataApi.md#IsReady)       | **Get** /health/ready | Check HTTP Server and Database Status |
 
 ## GetVersion
 
-> InlineResponse2001 GetVersion(ctx).Execute()
+> GetVersion200Response GetVersion(ctx).Execute()
 
 Return Running Software Version.
-
-
 
 ### Example
 
@@ -39,7 +35,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MetadataApi.GetVersion``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetVersion`: InlineResponse2001
+    // response from `GetVersion`: GetVersion200Response
     fmt.Fprintf(os.Stdout, "Response from `MetadataApi.GetVersion`: %v\n", resp)
 }
 ```
@@ -50,12 +46,12 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiGetVersionRequest struct via the builder pattern
-
+Other parameters are passed through a pointer to a apiGetVersionRequest struct
+via the builder pattern
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetVersion200Response**](GetVersion200Response.md)
 
 ### Authorization
 
@@ -66,18 +62,16 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-
 
 ## IsAlive
 
 > HealthStatus IsAlive(ctx).Execute()
 
 Check HTTP Server Status
-
-
 
 ### Example
 
@@ -111,8 +105,8 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiIsAliveRequest struct via the builder pattern
-
+Other parameters are passed through a pointer to a apiIsAliveRequest struct via
+the builder pattern
 
 ### Return type
 
@@ -127,18 +121,16 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
-
 ## IsReady
 
-> InlineResponse200 IsReady(ctx).Execute()
+> IsReady200Response IsReady(ctx).Execute()
 
 Check HTTP Server and Database Status
-
-
 
 ### Example
 
@@ -161,7 +153,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MetadataApi.IsReady``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `IsReady`: InlineResponse200
+    // response from `IsReady`: IsReady200Response
     fmt.Fprintf(os.Stdout, "Response from `MetadataApi.IsReady`: %v\n", resp)
 }
 ```
@@ -172,12 +164,12 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiIsReadyRequest struct via the builder pattern
-
+Other parameters are passed through a pointer to a apiIsReadyRequest struct via
+the builder pattern
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**IsReady200Response**](IsReady200Response.md)
 
 ### Authorization
 
@@ -188,7 +180,7 @@ No authorization required
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-
