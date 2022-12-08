@@ -1,4 +1,4 @@
-module github.com/ory/hydra-client-go
+module github.com/ory/hydra-client-go/v2
 
 go 1.13
 
