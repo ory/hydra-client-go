@@ -15,42 +15,37 @@ import (
 	"encoding/json"
 )
 
-// ErrorOAuth2 Error
-type ErrorOAuth2 struct {
-	// Error
+// RFC6749ErrorJson struct for RFC6749ErrorJson
+type RFC6749ErrorJson struct {
 	Error *string `json:"error,omitempty"`
-	// Error Debug Information  Only available in dev mode.
 	ErrorDebug *string `json:"error_debug,omitempty"`
-	// Error Description
 	ErrorDescription *string `json:"error_description,omitempty"`
-	// Error Hint  Helps the user identify the error cause.
 	ErrorHint *string `json:"error_hint,omitempty"`
-	// HTTP Status Code
 	StatusCode *int64 `json:"status_code,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
-type _ErrorOAuth2 ErrorOAuth2
+type _RFC6749ErrorJson RFC6749ErrorJson
 
-// NewErrorOAuth2 instantiates a new ErrorOAuth2 object
+// NewRFC6749ErrorJson instantiates a new RFC6749ErrorJson object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewErrorOAuth2() *ErrorOAuth2 {
-	this := ErrorOAuth2{}
+func NewRFC6749ErrorJson() *RFC6749ErrorJson {
+	this := RFC6749ErrorJson{}
 	return &this
 }
 
-// NewErrorOAuth2WithDefaults instantiates a new ErrorOAuth2 object
+// NewRFC6749ErrorJsonWithDefaults instantiates a new RFC6749ErrorJson object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewErrorOAuth2WithDefaults() *ErrorOAuth2 {
-	this := ErrorOAuth2{}
+func NewRFC6749ErrorJsonWithDefaults() *RFC6749ErrorJson {
+	this := RFC6749ErrorJson{}
 	return &this
 }
 
 // GetError returns the Error field value if set, zero value otherwise.
-func (o *ErrorOAuth2) GetError() string {
+func (o *RFC6749ErrorJson) GetError() string {
 	if o == nil || o.Error == nil {
 		var ret string
 		return ret
@@ -60,7 +55,7 @@ func (o *ErrorOAuth2) GetError() string {
 
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ErrorOAuth2) GetErrorOk() (*string, bool) {
+func (o *RFC6749ErrorJson) GetErrorOk() (*string, bool) {
 	if o == nil || o.Error == nil {
 		return nil, false
 	}
@@ -68,7 +63,7 @@ func (o *ErrorOAuth2) GetErrorOk() (*string, bool) {
 }
 
 // HasError returns a boolean if a field has been set.
-func (o *ErrorOAuth2) HasError() bool {
+func (o *RFC6749ErrorJson) HasError() bool {
 	if o != nil && o.Error != nil {
 		return true
 	}
@@ -77,12 +72,12 @@ func (o *ErrorOAuth2) HasError() bool {
 }
 
 // SetError gets a reference to the given string and assigns it to the Error field.
-func (o *ErrorOAuth2) SetError(v string) {
+func (o *RFC6749ErrorJson) SetError(v string) {
 	o.Error = &v
 }
 
 // GetErrorDebug returns the ErrorDebug field value if set, zero value otherwise.
-func (o *ErrorOAuth2) GetErrorDebug() string {
+func (o *RFC6749ErrorJson) GetErrorDebug() string {
 	if o == nil || o.ErrorDebug == nil {
 		var ret string
 		return ret
@@ -92,7 +87,7 @@ func (o *ErrorOAuth2) GetErrorDebug() string {
 
 // GetErrorDebugOk returns a tuple with the ErrorDebug field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ErrorOAuth2) GetErrorDebugOk() (*string, bool) {
+func (o *RFC6749ErrorJson) GetErrorDebugOk() (*string, bool) {
 	if o == nil || o.ErrorDebug == nil {
 		return nil, false
 	}
@@ -100,7 +95,7 @@ func (o *ErrorOAuth2) GetErrorDebugOk() (*string, bool) {
 }
 
 // HasErrorDebug returns a boolean if a field has been set.
-func (o *ErrorOAuth2) HasErrorDebug() bool {
+func (o *RFC6749ErrorJson) HasErrorDebug() bool {
 	if o != nil && o.ErrorDebug != nil {
 		return true
 	}
@@ -109,12 +104,12 @@ func (o *ErrorOAuth2) HasErrorDebug() bool {
 }
 
 // SetErrorDebug gets a reference to the given string and assigns it to the ErrorDebug field.
-func (o *ErrorOAuth2) SetErrorDebug(v string) {
+func (o *RFC6749ErrorJson) SetErrorDebug(v string) {
 	o.ErrorDebug = &v
 }
 
 // GetErrorDescription returns the ErrorDescription field value if set, zero value otherwise.
-func (o *ErrorOAuth2) GetErrorDescription() string {
+func (o *RFC6749ErrorJson) GetErrorDescription() string {
 	if o == nil || o.ErrorDescription == nil {
 		var ret string
 		return ret
@@ -124,7 +119,7 @@ func (o *ErrorOAuth2) GetErrorDescription() string {
 
 // GetErrorDescriptionOk returns a tuple with the ErrorDescription field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ErrorOAuth2) GetErrorDescriptionOk() (*string, bool) {
+func (o *RFC6749ErrorJson) GetErrorDescriptionOk() (*string, bool) {
 	if o == nil || o.ErrorDescription == nil {
 		return nil, false
 	}
@@ -132,7 +127,7 @@ func (o *ErrorOAuth2) GetErrorDescriptionOk() (*string, bool) {
 }
 
 // HasErrorDescription returns a boolean if a field has been set.
-func (o *ErrorOAuth2) HasErrorDescription() bool {
+func (o *RFC6749ErrorJson) HasErrorDescription() bool {
 	if o != nil && o.ErrorDescription != nil {
 		return true
 	}
@@ -141,12 +136,12 @@ func (o *ErrorOAuth2) HasErrorDescription() bool {
 }
 
 // SetErrorDescription gets a reference to the given string and assigns it to the ErrorDescription field.
-func (o *ErrorOAuth2) SetErrorDescription(v string) {
+func (o *RFC6749ErrorJson) SetErrorDescription(v string) {
 	o.ErrorDescription = &v
 }
 
 // GetErrorHint returns the ErrorHint field value if set, zero value otherwise.
-func (o *ErrorOAuth2) GetErrorHint() string {
+func (o *RFC6749ErrorJson) GetErrorHint() string {
 	if o == nil || o.ErrorHint == nil {
 		var ret string
 		return ret
@@ -156,7 +151,7 @@ func (o *ErrorOAuth2) GetErrorHint() string {
 
 // GetErrorHintOk returns a tuple with the ErrorHint field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ErrorOAuth2) GetErrorHintOk() (*string, bool) {
+func (o *RFC6749ErrorJson) GetErrorHintOk() (*string, bool) {
 	if o == nil || o.ErrorHint == nil {
 		return nil, false
 	}
@@ -164,7 +159,7 @@ func (o *ErrorOAuth2) GetErrorHintOk() (*string, bool) {
 }
 
 // HasErrorHint returns a boolean if a field has been set.
-func (o *ErrorOAuth2) HasErrorHint() bool {
+func (o *RFC6749ErrorJson) HasErrorHint() bool {
 	if o != nil && o.ErrorHint != nil {
 		return true
 	}
@@ -173,12 +168,12 @@ func (o *ErrorOAuth2) HasErrorHint() bool {
 }
 
 // SetErrorHint gets a reference to the given string and assigns it to the ErrorHint field.
-func (o *ErrorOAuth2) SetErrorHint(v string) {
+func (o *RFC6749ErrorJson) SetErrorHint(v string) {
 	o.ErrorHint = &v
 }
 
 // GetStatusCode returns the StatusCode field value if set, zero value otherwise.
-func (o *ErrorOAuth2) GetStatusCode() int64 {
+func (o *RFC6749ErrorJson) GetStatusCode() int64 {
 	if o == nil || o.StatusCode == nil {
 		var ret int64
 		return ret
@@ -188,7 +183,7 @@ func (o *ErrorOAuth2) GetStatusCode() int64 {
 
 // GetStatusCodeOk returns a tuple with the StatusCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ErrorOAuth2) GetStatusCodeOk() (*int64, bool) {
+func (o *RFC6749ErrorJson) GetStatusCodeOk() (*int64, bool) {
 	if o == nil || o.StatusCode == nil {
 		return nil, false
 	}
@@ -196,7 +191,7 @@ func (o *ErrorOAuth2) GetStatusCodeOk() (*int64, bool) {
 }
 
 // HasStatusCode returns a boolean if a field has been set.
-func (o *ErrorOAuth2) HasStatusCode() bool {
+func (o *RFC6749ErrorJson) HasStatusCode() bool {
 	if o != nil && o.StatusCode != nil {
 		return true
 	}
@@ -205,11 +200,11 @@ func (o *ErrorOAuth2) HasStatusCode() bool {
 }
 
 // SetStatusCode gets a reference to the given int64 and assigns it to the StatusCode field.
-func (o *ErrorOAuth2) SetStatusCode(v int64) {
+func (o *RFC6749ErrorJson) SetStatusCode(v int64) {
 	o.StatusCode = &v
 }
 
-func (o ErrorOAuth2) MarshalJSON() ([]byte, error) {
+func (o RFC6749ErrorJson) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Error != nil {
 		toSerialize["error"] = o.Error
@@ -234,11 +229,11 @@ func (o ErrorOAuth2) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-func (o *ErrorOAuth2) UnmarshalJSON(bytes []byte) (err error) {
-	varErrorOAuth2 := _ErrorOAuth2{}
+func (o *RFC6749ErrorJson) UnmarshalJSON(bytes []byte) (err error) {
+	varRFC6749ErrorJson := _RFC6749ErrorJson{}
 
-	if err = json.Unmarshal(bytes, &varErrorOAuth2); err == nil {
-		*o = ErrorOAuth2(varErrorOAuth2)
+	if err = json.Unmarshal(bytes, &varRFC6749ErrorJson); err == nil {
+		*o = RFC6749ErrorJson(varRFC6749ErrorJson)
 	}
 
 	additionalProperties := make(map[string]interface{})
@@ -255,38 +250,38 @@ func (o *ErrorOAuth2) UnmarshalJSON(bytes []byte) (err error) {
 	return err
 }
 
-type NullableErrorOAuth2 struct {
-	value *ErrorOAuth2
+type NullableRFC6749ErrorJson struct {
+	value *RFC6749ErrorJson
 	isSet bool
 }
 
-func (v NullableErrorOAuth2) Get() *ErrorOAuth2 {
+func (v NullableRFC6749ErrorJson) Get() *RFC6749ErrorJson {
 	return v.value
 }
 
-func (v *NullableErrorOAuth2) Set(val *ErrorOAuth2) {
+func (v *NullableRFC6749ErrorJson) Set(val *RFC6749ErrorJson) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableErrorOAuth2) IsSet() bool {
+func (v NullableRFC6749ErrorJson) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableErrorOAuth2) Unset() {
+func (v *NullableRFC6749ErrorJson) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableErrorOAuth2(val *ErrorOAuth2) *NullableErrorOAuth2 {
-	return &NullableErrorOAuth2{value: val, isSet: true}
+func NewNullableRFC6749ErrorJson(val *RFC6749ErrorJson) *NullableRFC6749ErrorJson {
+	return &NullableRFC6749ErrorJson{value: val, isSet: true}
 }
 
-func (v NullableErrorOAuth2) MarshalJSON() ([]byte, error) {
+func (v NullableRFC6749ErrorJson) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableErrorOAuth2) UnmarshalJSON(src []byte) error {
+func (v *NullableRFC6749ErrorJson) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
