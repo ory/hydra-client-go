@@ -1002,7 +1002,7 @@ import (
 
 func main() {
 	pageSize := int64(789) // int64 | Items per Page  This is the number of items per page to return. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). (optional) (default to 250)
-	pageToken := "pageToken_example" // string | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). (optional) (default to "1")
+	pageToken := "pageToken_example" // string | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). (optional)
 	clientName := "clientName_example" // string | The name of the clients to filter by. (optional)
 	owner := "owner_example" // string | The owner of the clients to filter by. (optional)
 
@@ -1030,7 +1030,7 @@ Other parameters are passed through a pointer to a apiListOAuth2ClientsRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageSize** | **int64** | Items per Page  This is the number of items per page to return. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). | [default to 250]
- **pageToken** | **string** | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). | [default to &quot;1&quot;]
+ **pageToken** | **string** | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). | 
  **clientName** | **string** | The name of the clients to filter by. | 
  **owner** | **string** | The owner of the clients to filter by. | 
 
@@ -1126,7 +1126,7 @@ No authorization required
 
 ## ListTrustedOAuth2JwtGrantIssuers
 
-> []TrustedOAuth2JwtGrantIssuer ListTrustedOAuth2JwtGrantIssuers(ctx).MaxItems(maxItems).DefaultItems(defaultItems).Issuer(issuer).Execute()
+> []TrustedOAuth2JwtGrantIssuer ListTrustedOAuth2JwtGrantIssuers(ctx).PageSize(pageSize).PageToken(pageToken).Issuer(issuer).Execute()
 
 List Trusted OAuth2 JWT Bearer Grant Type Issuers
 
@@ -1145,13 +1145,13 @@ import (
 )
 
 func main() {
-	maxItems := int64(789) // int64 |  (optional)
-	defaultItems := int64(789) // int64 |  (optional)
+	pageSize := int64(789) // int64 | Items per Page  This is the number of items per page to return. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). (optional) (default to 250)
+	pageToken := "pageToken_example" // string | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). (optional)
 	issuer := "issuer_example" // string | If optional \"issuer\" is supplied, only jwt-bearer grants with this issuer will be returned. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.OAuth2API.ListTrustedOAuth2JwtGrantIssuers(context.Background()).MaxItems(maxItems).DefaultItems(defaultItems).Issuer(issuer).Execute()
+	resp, r, err := apiClient.OAuth2API.ListTrustedOAuth2JwtGrantIssuers(context.Background()).PageSize(pageSize).PageToken(pageToken).Issuer(issuer).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `OAuth2API.ListTrustedOAuth2JwtGrantIssuers``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1172,8 +1172,8 @@ Other parameters are passed through a pointer to a apiListTrustedOAuth2JwtGrantI
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **maxItems** | **int64** |  | 
- **defaultItems** | **int64** |  | 
+ **pageSize** | **int64** | Items per Page  This is the number of items per page to return. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). | [default to 250]
+ **pageToken** | **string** | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). | 
  **issuer** | **string** | If optional \&quot;issuer\&quot; is supplied, only jwt-bearer grants with this issuer will be returned. | 
 
 ### Return type
@@ -1725,7 +1725,7 @@ No authorization required
 
 ## RevokeOAuth2ConsentSessions
 
-> RevokeOAuth2ConsentSessions(ctx).Subject(subject).Client(client).All(all).Execute()
+> RevokeOAuth2ConsentSessions(ctx).Subject(subject).Client(client).ConsentRequestId(consentRequestId).All(all).Execute()
 
 Revoke OAuth 2.0 Consent Sessions of a Subject
 
@@ -1744,13 +1744,14 @@ import (
 )
 
 func main() {
-	subject := "subject_example" // string | OAuth 2.0 Consent Subject  The subject whose consent sessions should be deleted.
+	subject := "subject_example" // string | OAuth 2.0 Consent Subject  The subject whose consent sessions should be deleted. (optional)
 	client := "client_example" // string | OAuth 2.0 Client ID  If set, deletes only those consent sessions that have been granted to the specified OAuth 2.0 Client ID. (optional)
+	consentRequestId := "consentRequestId_example" // string | Consent Request ID  If set, revoke all token chains derived from this particular consent request ID. (optional)
 	all := true // bool | Revoke All Consent Sessions  If set to `true` deletes all consent sessions by the Subject that have been granted. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.OAuth2API.RevokeOAuth2ConsentSessions(context.Background()).Subject(subject).Client(client).All(all).Execute()
+	r, err := apiClient.OAuth2API.RevokeOAuth2ConsentSessions(context.Background()).Subject(subject).Client(client).ConsentRequestId(consentRequestId).All(all).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `OAuth2API.RevokeOAuth2ConsentSessions``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1771,6 +1772,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subject** | **string** | OAuth 2.0 Consent Subject  The subject whose consent sessions should be deleted. | 
  **client** | **string** | OAuth 2.0 Client ID  If set, deletes only those consent sessions that have been granted to the specified OAuth 2.0 Client ID. | 
+ **consentRequestId** | **string** | Consent Request ID  If set, revoke all token chains derived from this particular consent request ID. | 
  **all** | **bool** | Revoke All Consent Sessions  If set to &#x60;true&#x60; deletes all consent sessions by the Subject that have been granted. | 
 
 ### Return type
