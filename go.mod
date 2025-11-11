@@ -1,11 +1,10 @@
-module github.com/ory/hydra-client-go/v2
+module github.com/ory/hydra-client-go/v25
 
 go 1.24.0
 
 require (
-	github.com/ory/hydra-client-go v1.11.8
 	github.com/stretchr/testify v1.11.1
-	golang.org/x/oauth2 v0.32.0
+	golang.org/x/oauth2 v0.33.0
 )
 
 require (

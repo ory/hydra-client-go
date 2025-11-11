@@ -25,7 +25,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go"
+	openapiclient "github.com/ory/hydra-client-go/v25"
 )
 
 func main() {

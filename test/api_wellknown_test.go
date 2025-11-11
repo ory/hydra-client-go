@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/ory/hydra-client-go"
+	openapiclient "github.com/ory/hydra-client-go/v25"
 )
 
 func Test_client_WellknownAPIService(t *testing.T) {
