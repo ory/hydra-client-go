@@ -1,7 +1,7 @@
 /*
 Ory Hydra API
 
-Testing JwkAPIService
+Testing JwkAPIService -- node more
 
 */
 
@@ -11,10 +11,11 @@ package client
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/ory/hydra-client-go/v25"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/ory/hydra-client-go/v25"
 )
 
 func Test_client_JwkAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_client_JwkAPIService(t *testing.T) {
 
 	t.Run("Test JwkAPIService CreateJsonWebKeySet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var set string
 
@@ -38,7 +39,7 @@ func Test_client_JwkAPIService(t *testing.T) {
 
 	t.Run("Test JwkAPIService DeleteJsonWebKey", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var set string
 		var kid string
@@ -52,7 +53,7 @@ func Test_client_JwkAPIService(t *testing.T) {
 
 	t.Run("Test JwkAPIService DeleteJsonWebKeySet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var set string
 
@@ -65,7 +66,7 @@ func Test_client_JwkAPIService(t *testing.T) {
 
 	t.Run("Test JwkAPIService GetJsonWebKey", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var set string
 		var kid string
@@ -80,7 +81,7 @@ func Test_client_JwkAPIService(t *testing.T) {
 
 	t.Run("Test JwkAPIService GetJsonWebKeySet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var set string
 
@@ -94,7 +95,7 @@ func Test_client_JwkAPIService(t *testing.T) {
 
 	t.Run("Test JwkAPIService SetJsonWebKey", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var set string
 		var kid string
@@ -109,7 +110,7 @@ func Test_client_JwkAPIService(t *testing.T) {
 
 	t.Run("Test JwkAPIService SetJsonWebKeySet", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var set string
 
