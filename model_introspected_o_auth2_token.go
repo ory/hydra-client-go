@@ -3,7 +3,7 @@ Ory Hydra API
 
 Documentation for all of Ory Hydra's APIs. 
 
-API version: v25.4.0
+API version: v26.2.0
 Contact: hi@ory.sh
 */
 
@@ -25,7 +25,7 @@ type IntrospectedOAuth2Token struct {
 	Active bool `json:"active"`
 	// Audience contains a list of the token's intended audiences.
 	Aud []string `json:"aud,omitempty"`
-	// ID is aclient identifier for the OAuth 2.0 client that requested this token.
+	// ID is a client identifier for the OAuth 2.0 client that requested this token.
 	ClientId *string `json:"client_id,omitempty"`
 	// Expires at is an integer timestamp, measured in the number of seconds since January 1 1970 UTC, indicating when this token will expire.
 	Exp *int64 `json:"exp,omitempty"`

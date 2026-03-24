@@ -55,7 +55,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -123,7 +123,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -191,7 +191,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -257,7 +257,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -325,7 +325,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -391,7 +391,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -459,7 +459,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -523,7 +523,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -591,7 +591,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -661,7 +661,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -727,7 +727,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -793,7 +793,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -859,7 +859,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -929,7 +929,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -997,7 +997,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1069,13 +1069,13 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
 	subject := "subject_example" // string | The subject to list the consent sessions for.
 	pageSize := int64(789) // int64 | Items per Page  This is the number of items per page to return. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). (optional) (default to 250)
-	pageToken := "pageToken_example" // string | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). (optional) (default to "1")
+	pageToken := "pageToken_example" // string | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). (optional)
 	loginSessionId := "loginSessionId_example" // string | The login session id to list the consent sessions for. (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1103,7 +1103,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subject** | **string** | The subject to list the consent sessions for. | 
  **pageSize** | **int64** | Items per Page  This is the number of items per page to return. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). | [default to 250]
- **pageToken** | **string** | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). | [default to &quot;1&quot;]
+ **pageToken** | **string** | Next Page Token  The next page token. For details on pagination please head over to the [pagination documentation](https://www.ory.sh/docs/ecosystem/api-design#pagination). | 
  **loginSessionId** | **string** | The login session id to list the consent sessions for. | 
 
 ### Return type
@@ -1141,7 +1141,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1211,7 +1211,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1272,7 +1272,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1333,7 +1333,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1407,7 +1407,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1479,7 +1479,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1540,7 +1540,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1608,7 +1608,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1676,7 +1676,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1740,7 +1740,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1810,7 +1810,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1876,7 +1876,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -1944,7 +1944,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -2016,7 +2016,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
@@ -2089,7 +2089,7 @@ import (
 	"fmt"
 	"os"
     "time"
-	openapiclient "github.com/ory/hydra-client-go/v25"
+	openapiclient "github.com/ory/hydra-client-go/v26"
 )
 
 func main() {
